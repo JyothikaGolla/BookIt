@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-  axios.get('https://bookit-b5bj.onrender.com/experiences')
+  axios.get('https://bookit-2-tugn.onrender.com/experiences')
       .then(r => {
         setExperiences(r.data);
         setError('');
