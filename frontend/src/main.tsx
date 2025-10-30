@@ -1,6 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Details from './pages/Details'
 import Checkout from './pages/Checkout'
@@ -10,7 +10,7 @@ import './styles.css'
 
 function App(){
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/experiences/:id' element={<Details/>}/>
@@ -18,7 +18,7 @@ function App(){
         <Route path='/result' element={<Result/>}/>
         <Route path='/search' element={<Search/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
