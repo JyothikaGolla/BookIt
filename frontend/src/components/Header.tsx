@@ -92,7 +92,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <div className="flex items-center gap-8 w-full">
+        <div className="flex items-center justify-between w-full gap-8">
           <Link to="/" className="flex items-center flex-shrink-0">
             <img 
               src={hdLogo}
@@ -100,8 +100,8 @@ export default function Header() {
               className="logo"
             />
           </Link>
-          
-          <div className="flex-grow max-w-2xl" ref={searchRef}>
+          {/* Move search bar to right side */}
+          <div className="max-w-2xl w-full" ref={searchRef}>
             <div className="relative">
               <div className="relative">
                 <input
@@ -128,7 +128,6 @@ export default function Header() {
                   />
                 </svg>
               </div>
-              
               <button
                 onClick={() => handleSearch()}
                 className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1.5 
@@ -138,7 +137,6 @@ export default function Header() {
               >
                 Search
               </button>
-
               {/* Search Suggestions */}
               {showSuggestions && suggestions.length > 0 ? (
                 <div className="absolute left-0 right-0 top-full mt-1 bg-white rounded-lg shadow-lg 
