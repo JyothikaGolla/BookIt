@@ -3,8 +3,8 @@
 A fullstack booking application for travel experiences and slots.
 
 ## Live Demo
-- **Frontend (GitHub Pages):** [https://jyothikagolla.github.io/BookIt/](https://jyothikagolla.github.io/BookIt/)
-- **Backend (Render):** [https://bookit-b5bj.onrender.com/](https://bookit-b5bj.onrender.com/)
+- **Frontend (Render):** [https://bookit-3-znqb.onrender.com](https://bookit-3-znqb.onrender.com)
+- **Backend (Render):** [https://bookit-2-tugn.onrender.com](https://bookit-2-tugn.onrender.com)
 
 ## Features
 - Browse curated travel experiences
@@ -13,6 +13,7 @@ A fullstack booking application for travel experiences and slots.
 - Apply promo codes for discounts
 - See booking confirmation or failure
 - Responsive, mobile-friendly UI
+- Modern hover effects on cards and buttons
 
 ## Tech Stack
 - **Frontend:** React + TypeScript + Vite + TailwindCSS
@@ -47,11 +48,11 @@ A fullstack booking application for travel experiences and slots.
 
 ## Deployment
 - **Frontend:**
-  - Deployed to GitHub Pages using `gh-pages`.
-  - Vite config uses `base: '/BookIt/'`.
+   - Deployed to Render as a Static Site.
+   - Vite config uses `base: '/'` for Render deployment.
 - **Backend:**
-  - Deployed to Render.
-  - API URLs in frontend point to Render backend.
+   - Deployed to Render as a Web Service.
+   - API URLs in frontend point to Render backend.
 
 ## Figma Design
 - [Figma Link](https://www.figma.com/design/8X6E1Ev8YdtZ3erV0Iifvb/HD-booking?node-id=01&p=f&t=K4scwnxfIHmfbb2a-0)
