@@ -6,5 +6,5 @@ export default defineConfig({
   server: {
     port: 5173
   },
-  base: '/BookIt/', // Set base for GitHub Pages deployment
+  base: '/', // Set base
 })
