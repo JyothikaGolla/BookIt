@@ -15,7 +15,7 @@ export default function Search() {
     const fetchResults = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`https://bookit-2-tugn.onrender.com/experiences/search?q=${encodeURIComponent(query)}`);
+  const res = await axios.get(`https://bookit-2-tugn.onrender.com/experiences/search?q=${encodeURIComponent(query)}`); // backend URL is correct
         setExperiences(res.data);
         setError('');
       } catch (err) {

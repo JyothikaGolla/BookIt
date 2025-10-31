@@ -19,7 +19,7 @@ const Details: React.FC = () => {
   useEffect(() => {
     if (!id) return;
     setLoading(true);
-    axios.get(`http://localhost:4000/experiences/${id}`)
+  axios.get(`https://bookit-2-tugn.onrender.com/experiences/${id}`) // backend URL is correct
       .then(r => {
         setExperience(r.data);
         setError('');

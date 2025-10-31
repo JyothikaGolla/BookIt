@@ -11,7 +11,8 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-  axios.get('https://bookit-2-tugn.onrender.com/experiences')
+    // Frontend deployed at: https://bookit-3-znqb.onrender.com
+    axios.get('https://bookit-2-tugn.onrender.com/experiences') // backend URL is correct
       .then(r => {
         setExperiences(r.data);
         setError('');

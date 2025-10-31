@@ -63,7 +63,7 @@ export default function Checkout() {
     if (!promo.trim()) return;
     setApplyingPromo(true);
     try {
-      const res = await axios.post<PromoResponse>('http://localhost:4000/promo/validate', { code: promo });
+  const res = await axios.post<PromoResponse>('https://bookit-2-tugn.onrender.com/promo/validate', { code: promo }); // backend URL is correct
       setPromoResult(res.data);
     } catch (err) {
       setPromoResult({ valid: false });
@@ -104,7 +104,7 @@ export default function Checkout() {
 
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:4000/bookings', {
+  const res = await axios.post('https://bookit-2-tugn.onrender.com/bookings', { // backend URL is correct
         experienceId: experience._id,
         slotId: slot.id,
         user: { name, email }
