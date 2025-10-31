@@ -76,7 +76,10 @@ export default function Home() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {experiences.map(exp => (
-                <div key={exp._id} className="card p-0 overflow-hidden">
+                <div
+                  key={exp._id}
+                  className="card p-0 overflow-hidden transition-transform duration-200 hover:scale-105 hover:shadow-xl"
+                >
                   <img
                     src={exp.image}
                     alt={exp.title}
@@ -93,7 +96,10 @@ export default function Home() {
                         <span className="text-sm text-gray-500">From</span>
                         <span className="text-xl font-bold ml-1">₹{exp.price}</span>
                       </div>
-                      <Link to={`/experiences/${exp._id}`} className="bg-[#FFD60A] text-black px-4 py-2 rounded font-semibold hover:bg-yellow-300 transition-colors">
+                      <Link
+                        to={`/experiences/${exp._id}`}
+                        className="bg-[#FFD60A] text-black px-4 py-2 rounded font-semibold hover:bg-yellow-300 hover:scale-105 hover:shadow-md transition-all"
+                      >
                         View Details
                       </Link>
                     </div>
