@@ -23,6 +23,7 @@ export interface Slot {
 export interface BookingData {
     experience: Experience;
     slot: Slot;
+    quantity?: number;
 }
 
 export interface PromoResponse {

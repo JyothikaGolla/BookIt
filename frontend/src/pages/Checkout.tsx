@@ -43,7 +43,7 @@ export default function Checkout() {
     );
   }
 
-  const { experience, slot } = bookingData;
+  const { experience, slot, quantity = 1 } = bookingData;
 
   const validateForm = () => {
     const errors: Record<string, string> = {};
@@ -73,9 +73,8 @@ export default function Checkout() {
   };
 
   const calculatePrice = () => {
-    const basePrice = experience.price;
+    const basePrice = experience.price * quantity;
     if (!promoResult?.valid) return basePrice;
-    
     if (promoResult.discountType === 'percent') {
       return Math.max(0, basePrice - (basePrice * (promoResult.amount || 0) / 100));
     } else {
@@ -107,6 +106,7 @@ export default function Checkout() {
   const res = await axios.post('https://bookit-2-tugn.onrender.com/bookings', { // backend URL is correct
         experienceId: experience._id,
         slotId: slot.id,
+        quantity,
         user: { name, email }
       });
       if (res.data.success) {
@@ -223,7 +223,7 @@ export default function Checkout() {
                   </div>
                   <div className="flex justify-between text-gray-600 mb-2">
                     <span>Qty</span>
-                    <span>1</span>
+                    <span>{quantity}</span>
                   </div>
                   <div className="flex justify-between text-gray-600 mb-2">
                     <span>Subtotal</span>
