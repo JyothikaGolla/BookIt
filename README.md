@@ -36,11 +36,18 @@ A fullstack booking application for travel experiences and slots.
    cd ../backend
    npm install
    ```
-3. Start backend:
+3. Set up environment variables:
+   - Copy the example file to create your own `.env` file:
+     ```sh
+     copy backend\.env.example backend\.env
+     ```
+     (On Mac/Linux use: `cp backend/.env.example backend/.env`)
+   - Open `backend/.env` and update the values (e.g., your MongoDB connection string).
+4. Start backend:
    ```sh
    node index.js
    ```
-4. Start frontend:
+5. Start frontend:
    ```sh
    cd ../frontend
    npm run dev
